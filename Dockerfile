@@ -1,4 +1,5 @@
-FROM golang:1.26.7-alpine3.24 AS build
+# docker buildx build --push --platform linux/amd64,linux/arm64 -t mack/logstash-exporter:1.9.5 --build-arg VERSION=1.9.5 .
+FROM golang:1.26.10-alpine3.24 AS build
 
 ARG VERSION \
     GIT_COMMIT \
